@@ -1,6 +1,6 @@
 {
   "name": "filas",
-  "app_id": "",
+  "app_id": "0701e168",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
