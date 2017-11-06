@@ -25,7 +25,7 @@ export class HomePage {
       content: 'Avisando a portaria...'
     });
     loading.present();
-    this.fdb.object('/portarias/-Kxj8DMEiAEuqU_GrOli').update({ nome: "Anderson Luis da Silva", panico: false});
+    this.fdb.object('/portarias/-Kxj8DMEiAEuqU_GrOli').update({ nome: "Anderson Luis Ribeiro", panico: false});
     loading.dismiss();
   }
 
@@ -34,7 +34,7 @@ export class HomePage {
       content: 'Avisando a portaria...'
     });
     loading.present();
-    this.fdb.object('/portarias/-Kxj8DMEiAEuqU_GrOli').update({ nome: "Anderson Luis da Silva", panico: true});
+    this.fdb.object('/portarias/-Kxj8DMEiAEuqU_GrOli').update({ nome: "Anderson Luis Ribeiro", panico: true});
     loading.dismiss();   
   }
 
