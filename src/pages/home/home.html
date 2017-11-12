@@ -8,8 +8,14 @@
 
 <ion-content center class="danger">
 
-  <ion-grid>
+  <ion-row *ngIf="!logado">
+    <button ion-button color="danger" icon-left large full (click)="login()">
+      <ion-icon name="person"></ion-icon>
+      Login com Google
+    </button>
+  </ion-row>  
 
+  <ion-grid *ngIf="logado">
     <ion-row center>
       <ion-card>
         <ion-card-content>
