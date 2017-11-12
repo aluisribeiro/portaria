@@ -54,7 +54,7 @@ export class HomePage {
   }
 
   login(){
-    this.fath.auth.signInWithPopup( new firebase.auth.GoogleAuthProvider() ).then( res => {
+    this.fath.auth.signInWithRedirect( new firebase.auth.GoogleAuthProvider() ).then( res => {
       this.nome = res.user.displayName;
       this.logado = true;
     })
