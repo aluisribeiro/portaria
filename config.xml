@@ -81,7 +81,7 @@
     <universal-links>
         <host name="x3swy.app.goo.gl" scheme="https" />
         <host name="portaria-459b5.firebaseapp.com" scheme="https">
-            <path url="/_/auth/callback">
+            <path url="/__/auth/callback" />
         </host>
     </universal-links>
     <allow-navigation href="http://192.168.2.101:8100" />
