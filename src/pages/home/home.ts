@@ -13,7 +13,6 @@ import { Pessoa } from '../../models/pessoa';
 })
 export class HomePage {
 
-  nome : string;
   logado = false as boolean;
 
   constructor(
@@ -31,7 +30,7 @@ export class HomePage {
       content: 'Avisando a portaria...'
     });
     loading.present();
-    this.fdb.object('/portarias/-Kxj8DMEiAEuqU_GrOli').update({ nome: this.nome, panico: false});
+    this.fdb.object('/portarias/-Kxj8DMEiAEuqU_GrOli').update({ nome: "Joaquim da Silva Pereira", panico: false});
     loading.dismiss();
   }
 
@@ -40,7 +39,7 @@ export class HomePage {
       content: 'Avisando a portaria...'
     });
     loading.present();
-    this.fdb.object('/portarias/-Kxj8DMEiAEuqU_GrOli').update({ nome: this.nome, panico: true});
+    this.fdb.object('/portarias/-Kxj8DMEiAEuqU_GrOli').update({ nome: "Joaquim da Silva Pereira", panico: true});
     loading.dismiss();   
   }
 
@@ -53,15 +52,12 @@ export class HomePage {
     loading.dismiss();   
   }
 
-  login(){
-    this.fath.auth.signInWithRedirect( new firebase.auth.GoogleAuthProvider() ).then( () => {
-      this.fath.auth.getRedirectResult().then( res => {
-        console.log("oi");
-        this.nome = res.user.displayName;
-        this.logado = true;
-      });
-    })
-  }
+  // login(){
+  //   this.fath.auth.signInWithPopup( new firebase.auth.GoogleAuthProvider() ).then( res => {
+  //      this.nome = res.user.displayName;
+  //      this.logado = true;
+  //   })
+  // }
 
 
 }
