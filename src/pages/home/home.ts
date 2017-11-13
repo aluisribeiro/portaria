@@ -54,9 +54,12 @@ export class HomePage {
   }
 
   login(){
-    this.fath.auth.signInWithRedirect( new firebase.auth.GoogleAuthProvider() ).then( res => {
-      this.nome = res.user.displayName;
-      this.logado = true;
+    this.fath.auth.signInWithRedirect( new firebase.auth.GoogleAuthProvider() ).then( () => {
+      this.fath.auth.getRedirectResult().then( res => {
+        console.log("oi");
+        this.nome = res.user.displayName;
+        this.logado = true;
+      });
     })
   }
 
